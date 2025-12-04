@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">Plant Disease Predictor</div>
+        <ul>
+            <li><a href="/" class="{% if request.path == '/' %}active{% endif %}">Home</a></li>
+            <li><a href="/project" class="{% if request.path == '/project' %}active{% endif %}">About Project</a></li>
+            <li><a href="/about" class="{% if request.path == '/about' %}active{% endif %}">About Me</a></li>
+        </ul>
+    </nav>
+
+    <!-- PREDICTOR BOX -->
+    <section class="predictor-section">
+        <div class="predictor-container">
+            <h1>Plant Disease Predictor</h1>
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" accept="image/*" required>
+                <input type="submit" value="Predict">
+            </form>
+
+            {% if prediction %}
+            <div class="result">
+                <h2>Prediction:</h2>
+                <p>{{ prediction }}</p>
+                <img src="{{ url_for('static', filename=request.files['file'].filename) }}" class="uploaded-img">
+            </div>
+            {% endif %}
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Butterfly | AI Enthusiast 🌱</p>
+    </footer>
+
+</body>
+</html>

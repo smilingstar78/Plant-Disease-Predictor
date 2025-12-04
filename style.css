@@ -1,0 +1,263 @@
+/* ------------------- GENERAL ------------------- */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+/* ------------------- NAVBAR ------------------- */
+nav {
+    background: #4caf50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+nav .logo {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background: #ffffff30;
+    border-radius: 5px;
+    color: #fff;
+}
+
+/* ------------------- HERO / ABOUT SECTIONS ------------------- */
+.about-hero, .project-hero {
+    padding: 60px 20px;
+}
+
+.about-hero {
+    background: linear-gradient(to right, #b8f2e6, #90e0ef);
+}
+
+.project-hero {
+    background: linear-gradient(to right, #f0f8ff, #e0f7fa);
+}
+
+.about-container, .project-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+}
+
+/* About Me Section */
+.profile-pic {
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h1 {
+    font-size: 2.2em;
+    color: #4caf50;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Project Section */
+.project-container h1 {
+    color: #4caf50;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.project-container h2 {
+    color: #388e3c;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.project-container p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.project-container ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.project-container ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.project-container ul li::before {
+    content: "🌿";
+    position: absolute;
+    left: 0;
+}
+
+/* ------------------- PREDICTOR SECTION ------------------- */
+.predictor-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.predictor-container {
+    background: #fff;
+    padding: 50px 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+}
+
+.predictor-container h1 {
+    color: #2d6a4f;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+.predictor-container input[type="file"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.predictor-container input[type="submit"] {
+    background: #2d6a4f;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.predictor-container input[type="submit"]:hover {
+    background: #95d5b2;
+    color: #2d6a4f;
+}
+
+.result {
+    margin-top: 30px;
+}
+
+.result h2 {
+    color: #2d6a4f;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.uploaded-img {
+    max-width: 250px;
+    margin-top: 15px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+
+/* ------------------- FOOTER ------------------- */
+footer {
+    background: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 50px;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+    margin-left: 10px;
+}
+
+footer a:hover {
+    color: #ffe066;
+}
+
+/* ------------------- BUTTONS ------------------- */
+button, input[type="submit"] {
+    background: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: #388e3c;
+}
+
+/* ------------------- MEDIA QUERIES ------------------- */
+@media (max-width: 768px) {
+    .about-container, .project-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic {
+        margin: auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
